@@ -8,6 +8,8 @@ scraped_data = []
 browser = webdriver.Chrome("C:/Users/adity/esktop/Python Projects/Project-127/chromedriver_win32/chromedriver.exe")
 browser.get(START_URL)
 
+time.sleep(10)
+
 def scrape():
 
     soup = BeautifulSoup(browser.page_source, "html.parser")
@@ -47,6 +49,7 @@ for i in range(0,len(scraped_data)):
     required_data = [Star_names, Distance, Mass, Radius, Lum]
     stars_data.append(required_data)
 
+print(stars_data)
 
 headers = ['Star_name', 'Distance', 'Mass', 'Radius', 'Luminosity']  
 
